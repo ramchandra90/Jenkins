@@ -1,5 +1,7 @@
 pipleline {
-    agent any 
+    agent {
+        label 'Agent'
+    } 
     stages {
         stage('Build') {
             steps {
