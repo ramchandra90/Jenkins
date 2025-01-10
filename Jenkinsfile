@@ -1,7 +1,5 @@
 pipleline {
-    agent {
-        label 'Agent'
-    } 
+    agent any
     stages {
         stage('Build') {
             steps {
@@ -18,21 +16,6 @@ pipleline {
             steps {
                 sh 'echo This is Deploy'
             }  
-        }
-    }
-
-    post {
-        always{
-            echo " This section runs always"
-        }
-
-        success{
-            echo "This section run when pipline is success"
-
-        }
-
-        failure{
-            echo "This section run when pipline is failure"
         }
     }
 }
